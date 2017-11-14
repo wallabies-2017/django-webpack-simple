@@ -7,7 +7,6 @@ if( process.env.NODE_ENV !== 'staging' ){
 	var spawn = require( 'child_process' ).spawn;
 	var django = spawn( 'python3', ['../manage.py', 'runserver', '127.0.0.1:3000'] );
 	var fs = require( 'fs' );
-	fs.writeFile( process.env.PWD+'/env/django.pid', django.pid );
 
 	console.log( 'django started on port 3000' );
 
