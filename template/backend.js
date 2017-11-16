@@ -3,10 +3,8 @@
 if( process.env.NODE_ENV !== 'staging' ){
 	var httpProxy = require( 'http-proxy' );
 	var apiProxy = httpProxy.createProxyServer();
-	var util = require( 'util' );
 	var spawn = require( 'child_process' ).spawn;
-	var django = spawn( 'python3', ['../manage.py', 'runserver', '127.0.0.1:3000'] );
-	var fs = require( 'fs' );
+	var django = spawn( 'python3', ['{{django_path_to_manage}}', 'runserver', '127.0.0.1:3000'] );
 
 	console.log( 'django started on port 3000' );
 

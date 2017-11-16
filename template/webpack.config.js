@@ -89,6 +89,14 @@ module.exports = {
       "/api/*": {
         target: "http://localhost:3000",
         secure: false           
+      },
+      "/authenticate/*": {
+        target: "http://localhost:3000",
+        secure: false           
+      },
+      "/api-auth/*": {
+        target: "http://localhost:3000",
+        secure: false           
       }
     }
   },
